@@ -1,0 +1,219 @@
+:root{
+    --bp:1px solid black;
+    --bf:1px solid black;
+    --be:20px outset #0059;
+    --minWidth:1px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#header{
+    width: 100%;
+    min-width:720px;
+    border: var(--bp);
+    height:18vh;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.contenedoresElementosMenu{
+    border: var(--bp);
+}
+
+#contenedorElementoMenu1{
+    width: 45%;
+    display: flex;
+
+    align-items: center;
+}
+
+#contenedorElementoMenu2{
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#miPorfolioMenuNombre{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+    position: relative;
+    left: 10%;
+    color: white;
+}
+
+.menuItem{
+    text-decoration: none;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: white;
+}
+
+.menuItem:hover{
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-name: vibracion;
+    font-size: 28px;
+    color: red;
+}
+
+@keyframes vibracion{
+    30%{
+        
+            transform: translateX(-5px);
+            transition:0.05s;
+            transform: translateY(-4px);
+            
+    }
+    70%{
+            transform: translateX(2px);
+            transform: translateY(2px);
+            transition:0.5s;
+    }
+}
+
+#cuerpoPrincipal{
+    width:100vw;
+    min-width:var(--minWidth) ;
+    height: 82vh;
+    min-height: 504px;
+    border: var(--bp);
+    background-color: #0039;
+    display: flex;
+    flex-direction: row;
+}
+
+.divisionesCuerpo{
+    border: var(--bp);
+    height: 100%;
+
+}
+
+#cuerpoPrincipalIzquierda{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cuerpoPrincipalDerecha{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--bf);
+}
+
+#contenedorCuerpoPrincipalIzquierda{
+    border: var(--bp);
+    width: 68%;
+    height: 73%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.divisionesIzquierda{
+    border: var(--bp);
+}
+
+#cuerpoPrincipalIzquierdaHeader{
+    width: 50%;
+    height:15% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+
+#cuerpoPrincipalIzquierdaMain{
+    width: 75%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cuerpoPrincipalIzquierdaFooter{
+    width: 90%;
+    height: 35%;
+}
+
+#nombreAutor{
+    color: white;
+    font-size: 300%;
+}
+
+#descripcionDeMi{
+    color: black;
+    font-size: 24px;
+}
+
+.logosContacto{
+    width: 60%;
+    height: 100%;
+}
+
+#linkProyectos{
+    color: black;
+    font-size: 30px;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+#linkProyectos:hover{
+    color: red;
+    animation-name: cambiarEscala;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    
+}
+
+#mainDeLaDerecha{
+    border: var(--be);
+    width: 75%;
+    height: 85%;
+    background-image: url("../img/flores.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    animation-name: cambioImagen;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes cambioImagen{
+
+    25%{
+        background-image: url("../img/flores3.webp");
+    }
+
+    50%{
+        background-image: url("../img/flores4.webp");
+    }
+
+    75%{
+        background-image: url("../img/flores3.webp");
+    }
+}
+
+@keyframes cambiarEscala{
+    50%{
+        transform: scale(1.5);
+        transition: 1s;
+    }
+}
